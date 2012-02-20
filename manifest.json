@@ -1,0 +1,22 @@
+{
+  "name": "dummy",
+  "version": "0.1",
+  "description": "",
+  "icons": {},
+  "background_page": "background.html",
+  "permissions": ["tabs", "http://*/*", "https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": [],
+      "js": ["gm.js","agent_bootstrap.js"],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+	"browser_action": {
+	    "default_title": "foo popup",
+	    "default_icon": "icon.png",
+	    "popup": "index.html"
+	  }
+}
